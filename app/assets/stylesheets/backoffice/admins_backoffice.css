@@ -1,10 +1,71 @@
+/* Customização para Admin Backoffice */
+
 body {
-  background-color: #f5f5f5;
+  background-color: #f8f9fc;
+  font-family: "Nunito", sans-serif;
 }
 
-.admin-header {
-  color: #2c3e50;
-  font-weight: bold;
-  text-align: center;
-  padding: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: #4e73df;
+}
+
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, .15);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.sidebar {
+  background-color: #4e73df;
+}
+
+.sidebar .nav-link {
+  color: #fff;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #2e59d9;
+  color: #fff;
+}
+
+.sidebar .sidebar-brand {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.topbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e3e6f0;
+}
+
+.footer {
+  background-color: #f8f9fc;
+  color: #858796;
+  font-size: 0.875rem;
+}
+
+/* Responsividade extra para os cards */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .topbar {
+    justify-content: center;
+  }
 }

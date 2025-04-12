@@ -1,0 +1,51 @@
+
+<h2>Delete Admin Account</h2>
+
+<div class="delete-account-container">
+  <p class="warning-text">Are you sure you want to delete your admin account?</p>
+  <p class="warning-subtext">This action cannot be undone.</p>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :delete }) do |f| %>
+    <div class="form-group">
+      <%= f.label :current_password, "Current Password" %>
+      <%= f.password_field :current_password, class: "form-control", autocomplete: "current-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Delete Account", class: "btn btn-danger", data: { confirm: "Are you absolutely sure?" } %>
+      <%= link_to "Cancel", :back, class: "btn btn-secondary" %>
+    </div>
+  <% end %>
+</div>
+
+<style>
+  .delete-account-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .warning-text {
+    color: #dc3545;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .warning-subtext {
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
