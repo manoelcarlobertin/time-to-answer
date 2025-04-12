@@ -19,6 +19,8 @@ module TimeToAnswer
   class Application < Rails::Application
     config.load_defaults 8.0
 
+    config.assets.resolve_with = [ :propshaft ]
+
     config.autoload_lib(ignore: %w[assets tasks])
 
     config.generators.system_tests = nil
