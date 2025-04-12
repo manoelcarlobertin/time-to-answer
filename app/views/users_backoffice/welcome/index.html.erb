@@ -1,42 +1,28 @@
-<!-- Page content -->
-<div class="right_col" role="main">
-  <div class="">
-    <div class="page-title">
-      <div class="title_left">
-        <h3>Bem-vindo ao Painel de Controle</h3>
-      </div>
-    </div>
+<h1>Seja bem-vindo!</h1>
 
-    <div class="clearfix"></div>
+<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+  <div class="tile-stats">
+    <div class="icon"><i class="fa fa-comments-o"></i></div>
+    <div class="count"><%#= @user_statistic.total_questions %></div>
+    <h3>Total</h3>
+    <p>Quantidade total de questões respondidas.</p>
+  </div>
+</div>
 
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-          <div class="x_title">
-            <h2>Dashboard <small>Visão Geral</small></h2>
-            <div class="clearfix"></div>
-          </div>
-          <div class="x_content">
-            <div class="row tile_count">
-              <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Total de Questões</span>
-                <div class="count">0</div>
-                <span class="count_bottom"><i class="green">Respondidas</i></span>
-              </div>
-              <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-                <span class="count_top"><i class="fa fa-clock-o"></i> Última Atividade</span>
-                <div class="count">Hoje</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> Da semana passada</span>
-              </div>
-              <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-                <span class="count_top"><i class="fa fa-trophy"></i> Pontuação</span>
-                <div class="count">0</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> Do mês passado</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+  <div class="tile-stats">
+    <div class="icon"><i class="fa fa fa-check-square-o"></i></div>
+    <div class="count"><%#= @user_statistic.right_questions %></div>
+    <h3>Certas</h3>
+    <p>Parabéns, continue respondendo as questões.</p>
+  </div>
+</div>
+
+<div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+  <div class="tile-stats">
+    <div class="icon"><i class="fa fa-close"></i></div>
+    <div class="count"><%#= @user_statistic.wrong_questions %></div>
+    <h3>Erradas</h3>
+    <p>Verifique as questões que errou para praticar mais.</p>
   </div>
 </div>
