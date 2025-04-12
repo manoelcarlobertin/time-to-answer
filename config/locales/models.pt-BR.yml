@@ -1,0 +1,72 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+      admin:
+        one: Administrador
+        other: Administradores
+      address:
+        one: Endereço
+        other: Endereços
+      category:
+        one: Categoria
+        other: Categorias
+      product:
+        one: Produto
+        other: Produtos
+      order:
+        one: Pedido
+        other: Pedidos
+      payment:
+        one: Pagamento
+        other: Pagamentos
+    attributes:
+      user:
+        name: Nome
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação de senha
+        current_password: Senha atual
+        remember_me: Lembrar-me
+        created_at: Criado em
+        updated_at: Atualizado em
+      address:
+        street: Rua
+        number: Número
+        complement: Complemento
+        neighborhood: Bairro
+        city: Cidade
+        state: Estado
+        zip_code: CEP
+      category:
+        name: Nome
+        description: Descrição
+      product:
+        name: Nome
+        description: Descrição
+        price: Preço
+        quantity: Quantidade
+        category: Categoria
+        image: Imagem
+      order:
+        total: Total
+        status: Status
+        payment_method: Método de pagamento
+        user: Usuário
+      payment:
+        amount: Valor
+        status: Status
+        payment_method: Método de pagamento
+        order: Pedido
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Não é possível excluir o registro pois existe um %{record} dependente
+          has_many: Não é possível excluir o registro pois existem %{record} dependentes
+    notice:
+      created: "%{model} foi criado com sucesso."
+      updated: "%{model} foi atualizado com sucesso."
+      destroyed: "%{model} foi excluído com sucesso."
