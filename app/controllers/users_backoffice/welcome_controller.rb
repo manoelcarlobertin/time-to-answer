@@ -1,6 +1,5 @@
 module UsersBackoffice
-  class WelcomeController < ApplicationController
-    layout "users_backoffice"
+  class WelcomeController < UsersBackofficeController
     # before_action :authenticate_user!
     # before_action :check_user
 

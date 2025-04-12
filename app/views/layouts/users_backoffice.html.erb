@@ -87,6 +87,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
+              <h3>Layout de Users_backoffice</h3>
               <%= yield %>
             </div>
           </div>
@@ -95,7 +96,7 @@
     </div>
 
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'users_backoffice' %>
+    <%= javascript_include_tag 'backoffice/users_backoffice' %>
 
     <% if notice %>
       <%= javascript_tag do %>
