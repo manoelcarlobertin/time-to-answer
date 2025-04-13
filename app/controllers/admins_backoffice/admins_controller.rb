@@ -3,7 +3,7 @@ class AdminsBackoffice::AdminsController < ApplicationController
   # before_action :authenticate_admin!
 
   def index
-    @admins = Admin.order(created_at: :asc)
+    @admins = Admin.all
   end
 
   def show

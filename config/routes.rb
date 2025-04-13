@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   namespace :admins_backoffice do
     get "admins/index"
     get "welcome/index" # Dashboard
-    get "admins/edit/:id", to: "admins#edit", as: "edit_admin"
-    delete "admins/destroy/:id", to: "admins#destroy", as: "destroy_admin"
     resources :admins # Administradores
   end
   namespace :users_backoffice do
