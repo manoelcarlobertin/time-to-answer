@@ -15,12 +15,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><%= @admin.id %></td>
-        <td><%= @admin.email %></td>
-        <td><%= l(@admin.created_at, format: :long) %></td>
-        <td><%= l(@admin.updated_at, format: :long) %></td>
-      </tr>
+      <% if @admin %>
+        <tr>
+          <td><%= @admin.id %></td>
+          <td><%= @admin.email %></td>
+          <td><%= l(@admin.created_at, format: :long) %></td>
+          <td><%= l(@admin.updated_at, format: :long) %></td>
+        </tr>
+      <% else %>
+        <tr><td colspan="4">Admin não encontrado.</td></tr>
+      <% end %>
     </tbody>
   </table>
 </div>
@@ -30,7 +34,9 @@
     <%= link_to admins_backoffice_admins_path, class: "btn btn-primary" do %>
       <i class="fa fa-arrow-left"></i> Voltar
     <% end %>
-    
+    <%= link_to admins_backoffice_admins_path, class: "btn btn-danger ml-2" do %>
+      <i class="fa fa-trash"></i> Excluir
+    <% end %>
     <%= link_to edit_admins_backoffice_admin_path(@admin), class: "btn btn-warning" do %>
       <i class="fa fa-edit"></i> Editar
     <% end %>

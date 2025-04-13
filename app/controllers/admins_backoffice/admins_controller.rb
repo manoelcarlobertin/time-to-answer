@@ -6,6 +6,14 @@ class AdminsBackoffice::AdminsController < ApplicationController
     @admins = Admin.order(created_at: :asc)
   end
 
+  def show
+    @admin = Admin.find_by(id: params[:id])
+    unless @admin
+      flash[:alert] = "Admin não encontrado"
+      redirect_to admins_backoffice_admins_path
+    end
+  end
+
   def new
     @admin = Admin.new
   end
