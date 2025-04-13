@@ -1,4 +1,3 @@
-
 // Configure your import map in config/importmap.rb
 
 import "@hotwired/turbo-rails"
@@ -8,15 +7,18 @@ import "../stylesheets/application"
 
 // Bootstrap initialization
 document.addEventListener("turbo:load", () => {
-  // Initialize all Bootstrap tooltips
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
+  // Initialize Bootstrap components
+  const initializeBootstrapComponents = () => {
+    // Initialize tooltips
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(element => {
+      new bootstrap.Tooltip(element)
+    })
 
-  // Initialize all Bootstrap popovers
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl)
-  })
+    // Initialize popovers
+    document.querySelectorAll('[data-bs-toggle="popover"]').forEach(element => {
+      new bootstrap.Popover(element)
+    })
+  }
+
+  initializeBootstrapComponents()
 })

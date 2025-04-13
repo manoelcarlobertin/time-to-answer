@@ -1,0 +1,27 @@
+<h1>Listagem de Administradores Cadastrados no Banco</h1>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @admins.each do |admin| %>
+        <tr>
+          <td><%= admin.id %></td>
+          <td><%= admin.email %></td>
+          <td>
+            <%= link_to 'Editar', edit_admins_backoffice_admin_path(admin), class: "btn btn-primary btn-sm" %>
+            <%= link_to 'Excluir', admins_backoffice_admin_path(admin), method: :delete,
+                class: "btn btn-danger btn-sm", data: { confirm: "Tem certeza?" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to 'Novo Administrador', new_admins_backoffice_admin_path, class: "btn btn-success" %>
+</div>
