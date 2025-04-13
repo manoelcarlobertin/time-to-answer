@@ -13,6 +13,7 @@ gem "rails-i18n"
 gem "devise", "~> 4.9" # Authentication
 gem "devise-i18n", "~> 1.10"
 gem "tty-spinner"
+gem "faker"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
