@@ -28,4 +28,9 @@
   <%= link_to 'Novo Administrador', new_admins_backoffice_admin_path, class: "btn btn-success" %>
 </div>
 
-<%= paginate @admins %>
+<%= paginate @admins,
+  container_class: "pagination-container",
+  page_links: true,
+  previous_label: 'Anterior',
+  next_label: 'Próximo' %>
+
