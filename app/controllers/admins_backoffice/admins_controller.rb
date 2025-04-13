@@ -3,7 +3,7 @@ class AdminsBackoffice::AdminsController < ApplicationController
   # before_action :authenticate_admin!
 
   def index
-    @admins = Admin.all
+    @admins = Admin.all.page(params[:page]).per(8)
   end
 
   def show

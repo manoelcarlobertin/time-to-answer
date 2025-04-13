@@ -14,6 +14,7 @@ gem "devise", "~> 4.9" # Authentication
 gem "devise-i18n", "~> 1.10"
 gem "tty-spinner"
 gem "faker"
+gem "kaminari"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
