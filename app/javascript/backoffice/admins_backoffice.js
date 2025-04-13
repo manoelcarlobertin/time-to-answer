@@ -4,6 +4,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import * as bootstrap from "bootstrap"
 import "../stylesheets/application"
+import "../javascript/admin-backoffice"
 
 // Bootstrap initialization
 document.addEventListener("turbo:load", () => {
