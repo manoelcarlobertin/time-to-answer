@@ -11,7 +11,7 @@ gem "cssbundling-rails"
 gem "jbuilder"
 gem "rails-i18n"
 gem "devise", "~> 4.9" # Authentication
-gem "devise-i18n", "~> 1.10"
+gem "devise-i18n", "~> 1.14"
 gem "tty-spinner"
 gem "faker"
 gem "kaminari"
